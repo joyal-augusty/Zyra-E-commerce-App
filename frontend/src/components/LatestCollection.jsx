@@ -5,8 +5,11 @@ import Title from './Title'
 const LatestCollection = () => {
 
   const { products } = useContext(ShopContext)
+  const [latestProducts, setLatestProducts] = useState([]);
 
-    
+  useEffect(() => {
+    setLatestProducts(products.slice(0, 10));
+    },[])
   
   return (
     <div className='my-10'>
@@ -16,6 +19,8 @@ const LatestCollection = () => {
           Discover our latest collection of premium products designed to elevate your everyday style.
         </p>
       </div>
+
+      
     </div>
   )
 }
