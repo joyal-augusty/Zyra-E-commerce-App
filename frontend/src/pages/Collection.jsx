@@ -7,6 +7,16 @@ const Collection = () => {
   const { products } = useContext(ShopContext)
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
+  const [category, setCategory] = useState([]);
+  cosnt[subCategory, setSubCategory] = useState([]);
+
+  const toggleCategory = (e) => {
+    if (category.includes(e.target.value)) {
+      setCategory(prev=> prev.filter(item => item !== e.target.value))
+    } else {
+      setCategory(prev => [...prev,e.target.value])
+    }
+  }
 
   useEffect(() => {
     setFilterProducts(products);
@@ -72,7 +82,7 @@ const Collection = () => {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
           {
             filterProducts.map((item, index) => {
-              <ProductItem key={index} />
+              <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image} />
             })
         }
         </div>
