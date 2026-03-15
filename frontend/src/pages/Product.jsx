@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react' 
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
-import { products } from '../assets/frontend_assets/assets';
+import { assets, products } from '../assets/frontend_assets/assets';
 
 const Product = () => {
 
@@ -39,6 +39,18 @@ useEffect(() => {
           </div>
           <div className='w-full sm:w-[80%]'>
               <img className='w-full h-auto' src={image} alt="" />
+          </div>
+        </div>
+
+        {/*  product info */}
+        <div className='flex-1'>
+          <h1 className='font-medium text-2xl mt-2'>{productData.name}</h1>
+          <div className='flex itmes-center gap-1 mt-2'>
+            <img src={assets.star_icon} alt="" className="w-3 5" />
+            <img src={assets.star_icon} alt="" className="w-3 5" />
+            <img src={assets.star_icon} alt="" className="w-3 5" />
+            <img src={assets.star_icon} alt="" className="w-3 5" />
+            <img src={assets.star_icon} alt="" className="w-3 5" />
           </div>
         </div>
       </div>
