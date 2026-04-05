@@ -61,7 +61,7 @@ const ShopContextProvider = (props) => {
         setCartItems(cartData);
     }
 
-    const getCartAmount = async() => {
+    const getCartAmount = () => {
         let totalAmount = 0;
         for (const items in cartItems) {
             let itemInfo = products.find((product) => product._id === items);
@@ -82,7 +82,8 @@ const ShopContextProvider = (props) => {
         products, currency, delivery_fee,
         search, setSearch, showSearch, setShowSearch,
         cartItems, addToCart,
-        getCartCount,updateQuantity
+        getCartCount,updateQuantity,
+        getCartAmount
     }
 
     return (
