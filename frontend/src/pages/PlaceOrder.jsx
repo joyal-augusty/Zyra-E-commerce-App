@@ -1,5 +1,7 @@
 import React from 'react'
 import Title from '../components/Title'
+import cartTotal from '../components/cartTotal'
+
 
 const PlaceOrder = () => {
   return (
@@ -28,8 +30,17 @@ const PlaceOrder = () => {
         </div>
 
         <input className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Phone' />
-
       </div>
+
+      {/*Right side */}
+      <div className='mt-8'>
+        <div className='mt-8 min-w-80'>
+            <cartTotal />
+        </div>
+        
+      </div>
+
+
     </div>
   )
 }
