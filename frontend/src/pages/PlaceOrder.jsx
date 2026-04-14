@@ -37,6 +37,14 @@ const PlaceOrder = () => {
         <div className='mt-8 min-w-80'>
             <cartTotal />
         </div>
+
+        <div className='mt-12'>
+          <Title text1={'PAYMENT'} text2={'METHOD'} />
+          {/*Payment Method Selection*/}
+          <div className='flex gap-3 flex-col lg:flex-row'>
+
+          </div>
+        </div>
         
       </div>
 
