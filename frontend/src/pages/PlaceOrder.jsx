@@ -44,6 +44,12 @@ const PlaceOrder = () => {
           <div className='flex gap-3 flex-col lg:flex-row'>
             <div className='flex items-center gap-3 border p-2 px-3 cursor-pointer'>
               <p className={`min-w-3.5 border rounded-full`}></p>
+              <div className='py-2 flex gap-3 flex-col border-gray rounded py-2 '>
+                <p className='py-2 flex gap-2 flex-col border-gray cursor-pointer'>Add card</p>
+                <p className='py-2 flex gap-2 flex-col border-gray cursor-pointer'>Cash delivery</p>
+                <p className='py-2 flex gap-2 flex-col border-gray cursor-pointer'>Pay by card</p>
+                <p className='py-2 flex gap-2 flex-col border-gray cursor-pointer'>pay using emi card</p>
+              </div>
             </div>
           </div>
         </div>
